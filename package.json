@@ -1,21 +1,21 @@
 {
   "name": "generator-front",
-  "version": "0.0.0",
+  "version": "0.1.1",
   "description": "A generator for Yeoman",
   "keywords": [
     "yeoman-generator"
   ],
-  "homepage": "https://github.com/someuser/generator-front",
-  "bugs": "https://github.com/someuser/generator-front/issues",
+  "homepage": "https://github.com/lukaszgrolik/generator-front",
+  "bugs": "https://github.com/lukaszgrolik/generator-front/issues",
   "author": {
     "name": "",
     "email": "",
-    "url": "https://github.com/someuser"
+    "url": "https://github.com/lukaszgrolik"
   },
   "main": "app/index.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/someuser/generator-front.git"
+    "url": "git://github.com/lukaszgrolik/generator-front.git"
   },
   "scripts": {
     "test": "mocha"
