@@ -1,6 +1,6 @@
 {
   "name": "generator-front",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A generator for Yeoman",
   "keywords": [
     "yeoman-generator"
@@ -8,8 +8,8 @@
   "homepage": "https://github.com/lukaszgrolik/generator-front",
   "bugs": "https://github.com/lukaszgrolik/generator-front/issues",
   "author": {
-    "name": "",
-    "email": "",
+    "name": "Łukasz Grolik",
+    "email": "lukasz@grolik.pl",
     "url": "https://github.com/lukaszgrolik"
   },
   "main": "app/index.js",
