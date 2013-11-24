@@ -1,0 +1,22 @@
+{
+  "name": "package",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "chosen": "latest",
+    "handlebars": "latest",
+    "html5shiv": "latest",
+    "jquery": "~1",
+    "jquery.syncHeight": "latest",
+    "jquery.ui": "latest",
+    "jquery-icheck": "latest",
+    "jquery-placeholder": "latest",
+    "modernizr": "latest",
+    "requirejs": "latest",
+    "respond": "latest",
+    "sass-handy-mixins": "latest",
+    "selectivizr": "latest",
+    "strict-reset.css": "latest"
+  }
+}
+
