@@ -1,4 +1,4 @@
-# generator-front [![Build Status](https://secure.travis-ci.org/someuser/generator-front.png?branch=master)](https://travis-ci.org/someuser/generator-front)
+# generator-front [![Build Status](https://secure.travis-ci.org/lukaszgrolik/generator-front.png?branch=master)](https://travis-ci.org/lukaszgrolik/generator-front)
 
 A generator for [Yeoman](http://yeoman.io).
 
