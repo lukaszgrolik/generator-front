@@ -24,6 +24,7 @@ var appFiles = [
   { templateName: 'gitignore', name: '.gitignore' },
   { templateName: 'Gruntfile.js', name: 'Gruntfile.js' },
   { templateName: 'config.rb', name: 'config.rb' },
+  { templateName: 'dploy.yaml', name: 'dploy.yaml' },
 
   { templateName: 'page-1.html', name: 'pages/page-1.html' },
 
