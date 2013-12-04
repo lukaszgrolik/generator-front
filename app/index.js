@@ -21,6 +21,7 @@ var appDirs = [
 var appFiles = [
   { templateName: '_package.json', name: 'package.json' },
   { templateName: '_bower.json', name: 'bower.json' },
+  { templateName: 'composer.json', name: 'composer.json' },
   { templateName: 'gitignore', name: '.gitignore' },
   { templateName: 'Gruntfile.js', name: 'Gruntfile.js' },
   { templateName: 'dploy.yaml', name: 'dploy.yaml' },
