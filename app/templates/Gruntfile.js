@@ -20,8 +20,16 @@ module.exports = function(grunt) {
     compass: {
       compile: {
         options: {
-          config: 'config.rb',
-          specify: [ 'sass/main.scss' ],
+          httpPath '/',
+          sassDir: 'src/sass',
+          cssDir: 'web/css',
+          javascriptsDir: 'web/js'
+          imagesDir: 'web/images',
+          fontsDir: 'web/fonts',
+          outputStyle: 'expanded',
+          require: [
+            'sass-globbing'
+          ]
         }
       }
     },
