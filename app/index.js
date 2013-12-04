@@ -26,14 +26,15 @@ var appFiles = [
   { templateName: 'dploy.yaml', name: 'dploy.yaml' },
   { templateName: 'web.php', name: 'web.php' },
 
-  { templateName: 'page-1.html', name: 'pages/page-1.html' },
-
   { templateName: 'main.scss', name: 'sass/main.scss' },
   { templateName: 'config.scss', name: 'sass/_config.scss' },
   { templateName: 'init.scss', name: 'sass/_init.scss' },
   { templateName: 'temp.scss', name: 'sass/_temp.scss' },
 
-  { templateName: 'modules-main.js', name: 'js/modules/main.js' }
+  { templateName: 'modules-main.js', name: 'js/modules/main.js' },
+
+  { templateName: 'views-layout.twig', name: 'views/layout.twig' },
+  { templateName: 'views-home.twig', name: 'views/home.twig' }
 ];
 
 var componentChoices = [
