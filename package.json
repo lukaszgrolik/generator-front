@@ -1,7 +1,7 @@
 {
   "name": "generator-front",
   "version": "0.2.0",
-  "description": "A generator for Yeoman",
+  "description": "A generator for Yeoman with PHP Silex + Twig, Sass & RequireJS support",
   "keywords": [
     "yeoman-generator"
   ],
