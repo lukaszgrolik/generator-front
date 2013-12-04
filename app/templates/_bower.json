@@ -2,21 +2,22 @@
   "name": "package",
   "version": "0.0.0",
   "private": true,
-  "dependencies": {
-    "chosen": "latest",
-    "handlebars": "latest",
-    "html5shiv": "latest",
-    "jquery": "~1",
-    "jquery.syncHeight": "latest",
-    "jquery.ui": "latest",
-    "jquery-icheck": "latest",
-    "jquery-placeholder": "latest",
-    "modernizr": "latest",
-    "requirejs": "latest",
-    "respond": "latest",
-    "sass-handy-mixins": "latest",
-    "selectivizr": "latest",
-    "strict-reset.css": "latest"
+  "dependencies": {<% if (almond) { %>
+    "almond": "latest",<% } %><% if (chosen) { %>
+    "chosen": "latest",<% } %><% if (handlebars) { %>
+    "handlebars": "latest",<% } %><% if (html5shiv) { %>
+    "html5shiv": "latest",<% } %><% if (jquerysyncHeight) { %>
+    "jquery.syncHeight": "latest",<% } %><% if (jqueryui) { %>
+    "jquery.ui": "latest",<% } %><% if (jqueryicheck) { %>
+    "jquery-icheck": "latest",<% } %><% if (jqueryplaceholder) { %>
+    "jquery-placeholder": "latest",<% } %><% if (modernizr) { %>
+    "modernizr": "latest",<% } %><% if (requirejs) { %>
+    "requirejs": "latest",<% } %><% if (respond) { %>
+    "respond": "latest",<% } %><% if (sasshandymixins) { %>
+    "sass-handy-mixins": "latest",<% } %><% if (selectivizr) { %>
+    "selectivizr": "latest",<% } %><% if (strictresetcss) { %>
+    "strict-reset.css": "latest",<% } %>
+    "jquery": "~1"
   }
 }
 

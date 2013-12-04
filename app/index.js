@@ -35,6 +35,23 @@ var appFiles = [
   { templateName: 'main.js', name: 'js/modules/main.js' }
 ];
 
+var componentChoices = [
+  { name: 'almond', value: 'almond', checked: true },
+  { name: 'chosen', value: 'chosen', checked: true },
+  { name: 'handlebars', value: 'handlebars', checked: true },
+  { name: 'html5shiv', value: 'html5shiv', checked: true },
+  { name: 'jquery.syncHeight', value: 'jquerysyncHeight', checked: true },
+  { name: 'jquery.ui', value: 'jqueryui', checked: true },
+  { name: 'jquery-icheck', value: 'jqueryicheck', checked: true },
+  { name: 'jquery-placeholder', value: 'jqueryplaceholder', checked: true },
+  { name: 'modernizr', value: 'modernizr', checked: true },
+  { name: 'requirejs', value: 'requirejs', checked: true },
+  { name: 'respond', value: 'respond', checked: true },
+  { name: 'sass-handy-mixins', value: 'sasshandymixins', checked: true },
+  { name: 'selectivizr', value: 'selectivizr', checked: true },
+  { name: 'strict-reset.css', value: 'strictresetcss', checked: true }
+];
+
 var FrontGenerator = module.exports = function FrontGenerator(args, options, config) {
   yeoman.generators.Base.apply(this, arguments);
 
@@ -58,10 +75,33 @@ FrontGenerator.prototype.askFor = function askFor() {
     name: 'appName',
     message: 'App name:',
     default: 'project'
+  }, {
+    type: 'checkbox',
+    name: 'bowerComponents',
+    message: 'Bower components (jquery already included):',
+    choices: componentChoices
   }];
 
   this.prompt(prompts, function (props) {
     this.appName = props.appName;
+
+    var components = props.bowerComponents;
+
+    function hasComponent(component) { return components.indexOf(component) !== -1; }
+
+    // manually deal with the response, get back and store the results.
+    // we change a bit this way of doing to automatically do this in the self.prompt() method.
+    // this.jquery = hasComponent('jquery');
+    // this.jqueryui = hasComponent('jqueryui');
+
+    var value;
+    var i;
+
+    for (i = 0; i < componentChoices.length; ++i) {
+      value = componentChoices[i].value;
+
+      this[value] = hasComponent(value);
+    };
 
     cb();
   }.bind(this));
