@@ -8,11 +8,10 @@ var appDirs = [
   'fonts',
   'images',
   'images-imagemin',
-  'includes',
   'js',
   'js/modules',
   'js/vendor',
-  'pages',
+  'views',
   'sass',
   'sass/blocks',
   'ui-docs'
