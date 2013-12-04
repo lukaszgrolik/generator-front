@@ -32,7 +32,7 @@ var appFiles = [
   { templateName: 'init.scss', name: 'sass/_init.scss' },
   { templateName: 'temp.scss', name: 'sass/_temp.scss' },
 
-  { templateName: 'main.js', name: 'js/modules/main.js' }
+  { templateName: 'modules-main.js', name: 'js/modules/main.js' }
 ];
 
 var componentChoices = [
