@@ -29,9 +29,10 @@ describe('front generator', function () {
             'bower.json',
             'composer.json',
             '.gitignore',
+            '.htaccess',
             'Gruntfile.js',
             'dploy.yaml',
-            'web.php',
+            'index.php',
 
             'sass/_config.scss',
             'sass/_init.scss',
