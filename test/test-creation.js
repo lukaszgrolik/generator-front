@@ -24,9 +24,24 @@ describe('front generator', function () {
             // add files you expect to exist here.
             // '.jshintrc',
             // '.editorconfig',
+
             'package.json',
             'bower.json',
-            'composer.json'
+            'composer.json',
+            '.gitignore',
+            'Gruntfile.js',
+            'dploy.yaml',
+            'web.php',
+
+            'sass/_config.scss',
+            'sass/_init.scss',
+            'sass/main.scss',
+            'sass/_temp.scss',
+
+            'js/modules/main.js',
+
+            'views/layout.twig',
+            'views/home.twig'
         ];
 
         var componentChoices = [
