@@ -3,38 +3,55 @@ var util = require('util');
 var path = require('path');
 var yeoman = require('yeoman-generator');
 
-// var appDirs = [
-//   'css',
-//   'fonts',
-//   'images',
-//   'images-imagemin',
-//   'includes',
-//   'js',
-//   'js/modules',
-//   'js/vendor',
-//   'pages',
-//   'sass',
-//   'sass/blocks',
-//   'ui-docs'
-// ];
-
-var appDirs = []
+var appDirs = [
+  'css',
+  'fonts',
+  'images',
+  'images-imagemin',
+  'js',
+  'js/modules',
+  'js/vendor',
+  'views',
+  'sass',
+  'sass/blocks',
+  'ui-docs'
+];
 
 var appFiles = [
-  // { templateName: '_package.json', name: 'package.json' },
-  // { templateName: '_bower.json', name: 'bower.json' },
-  // { templateName: 'gitignore', name: '.gitignore' },
-  // { templateName: 'Gruntfile.js', name: 'Gruntfile.js' },
-  // { templateName: 'config.rb', name: 'config.rb' },
-
-  // { templateName: 'page-1.html', name: 'pages/page-1.html' },
+  { templateName: '_package.json', name: 'package.json' },
+  { templateName: '_bower.json', name: 'bower.json' },
+  { templateName: 'composer.json', name: 'composer.json' },
+  { templateName: 'gitignore', name: '.gitignore' },
+  { templateName: 'Gruntfile.js', name: 'Gruntfile.js' },
+  { templateName: 'dploy.yaml', name: 'dploy.yaml' },
+  { templateName: 'web.php', name: 'web.php' },
 
   // { templateName: 'main.scss', name: 'sass/main.scss' },
   // { templateName: 'config.scss', name: 'sass/_config.scss' },
   // { templateName: 'init.scss', name: 'sass/_init.scss' },
   // { templateName: 'temp.scss', name: 'sass/_temp.scss' },
 
-  // { templateName: 'main.js', name: 'js/modules/main.js' }
+  { templateName: 'modules-main.js', name: 'js/modules/main.js' },
+
+  { templateName: 'views-layout.twig', name: 'views/layout.twig' },
+  { templateName: 'views-home.twig', name: 'views/home.twig' }
+];
+
+var componentChoices = [
+  { name: 'almond', value: 'almond', checked: true },
+  { name: 'chosen', value: 'chosen', checked: true },
+  { name: 'handlebars', value: 'handlebars', checked: true },
+  { name: 'html5shiv', value: 'html5shiv', checked: true },
+  { name: 'jquery.syncHeight', value: 'jquerysyncHeight', checked: true },
+  { name: 'jquery.ui', value: 'jqueryui', checked: true },
+  { name: 'jquery-icheck', value: 'jqueryicheck', checked: true },
+  { name: 'jquery-placeholder', value: 'jqueryplaceholder', checked: true },
+  { name: 'modernizr', value: 'modernizr', checked: true },
+  { name: 'requirejs', value: 'requirejs', checked: true },
+  { name: 'respond', value: 'respond', checked: true },
+  { name: 'sass-handy-mixins', value: 'sasshandymixins', checked: true },
+  { name: 'selectivizr', value: 'selectivizr', checked: true },
+  { name: 'strict-reset.css', value: 'strictresetcss', checked: true }
 ];
 
 var FrontGenerator = module.exports = function FrontGenerator(args, options, config) {
@@ -61,30 +78,10 @@ FrontGenerator.prototype.askFor = function askFor() {
     message: 'App name:',
     default: 'project'
   }, {
-    type: 'input',
-    name: 'cssDirPath',
-    message: 'css dir path:',
-    default: 'css/'
-  }, {
-    type: 'input',
-    name: 'sassDirPath',
-    message: 'sass dir path:',
-    default: 'sass/'
-  }, {
-    type: 'input',
-    name: 'jsDirPath',
-    message: 'js dir path:',
-    default: 'js/'
-  }, {
-    type: 'input',
-    name: 'imagesDirPath',
-    message: 'images dir path:',
-    default: 'images/'
-  }, {
-    type: 'input',
-    name: 'fontsDirPath',
-    message: 'fonts dir path:',
-    default: 'fonts/'
+    type: 'checkbox',
+    name: 'bowerComponents',
+    message: 'Bower components (jquery already included):',
+    choices: componentChoices
   }];
 
   this.prompt(prompts, function (props) {
@@ -100,6 +97,24 @@ FrontGenerator.prototype.askFor = function askFor() {
     appDirs.push({ name: 'js', path: this.jsDirPath});
     appDirs.push({ name: 'images', path: this.imagesDirPath});
     appDirs.push({ name: 'fonts', path: this.fontsDirPath});
+
+    var components = props.bowerComponents;
+
+    function hasComponent(component) { return components.indexOf(component) !== -1; }
+
+    // manually deal with the response, get back and store the results.
+    // we change a bit this way of doing to automatically do this in the self.prompt() method.
+    // this.jquery = hasComponent('jquery');
+    // this.jqueryui = hasComponent('jqueryui');
+
+    var value;
+    var i;
+
+    for (i = 0; i < componentChoices.length; ++i) {
+      value = componentChoices[i].value;
+
+      this[value] = hasComponent(value);
+    };
 
     cb();
   }.bind(this));
