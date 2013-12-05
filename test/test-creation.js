@@ -22,14 +22,26 @@ describe('front generator', function () {
     it('creates expected files', function (done) {
         var expected = [
             // add files you expect to exist here.
-            '.jshintrc',
-            '.editorconfig'
+            // '.jshintrc',
+            // '.editorconfig',
+            'package.json',
+            'bower.json',
+            'composer.json'
+        ];
+
+        var componentChoices = [
+          { name: 'html5shiv', value: 'html5shiv', checked: true },
+          { name: 'jquery.ui', value: 'jqueryui', checked: true },
+          { name: 'requirejs', value: 'requirejs', checked: true },
         ];
 
         helpers.mockPrompt(this.app, {
-            'someOption': true
+            // 'someOption': true,
+            'bowerComponents': componentChoices
         });
+
         this.app.options['skip-install'] = true;
+        
         this.app.run({}, function () {
             helpers.assertFiles(expected);
             done();
