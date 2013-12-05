@@ -86,17 +86,6 @@ FrontGenerator.prototype.askFor = function askFor() {
 
   this.prompt(prompts, function (props) {
     this.appName = props.appName;
-    this.cssDirPath = props.cssDirPath;
-    this.sassDirPath = props.sassDirPath;
-    this.jsDirPath = props.jsDirPath;
-    this.imagesDirPath = props.imagesDirPath;
-    this.fontsDirPath = props.fontsDirPath;
-
-    appDirs.push({ name: 'css', path: this.cssDirPath});
-    appDirs.push({ name: 'sass', path: this.sassDirPath});
-    appDirs.push({ name: 'js', path: this.jsDirPath});
-    appDirs.push({ name: 'images', path: this.imagesDirPath});
-    appDirs.push({ name: 'fonts', path: this.fontsDirPath});
 
     var components = props.bowerComponents;
 
@@ -124,7 +113,7 @@ FrontGenerator.prototype.app = function app() {
   var i, file;
 
   for (i = 0; i < appDirs.length; ++i) {
-    this.mkdir(appDirs[i].path);
+    this.mkdir(appDirs[i]);
   };
 
   for (i = 0; i < appFiles.length; ++i) {
