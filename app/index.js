@@ -34,7 +34,9 @@ var appFiles = [
   { templateName: 'js-modules-main.js', name: 'js/modules/main.js' },
 
   { templateName: 'views-layout.twig', name: 'views/layout.twig' },
-  { templateName: 'views-home.twig', name: 'views/home.twig' }
+  { templateName: 'views-home.twig', name: 'views/home.twig' },
+
+  { templateName: 'ui-docs-ui-controls.html', name: 'ui-docs/ui-controls.html' }
 ];
 
 var componentChoices = [

@@ -41,7 +41,9 @@ describe('front generator', function () {
             'js/modules/main.js',
 
             'views/layout.twig',
-            'views/home.twig'
+            'views/home.twig',
+
+            'ui-docs/ui-controls.html'
         ];
 
         var componentChoices = [
