@@ -48,6 +48,29 @@ module.exports = function(grunt) {
       }
     },
 
+    requirejs: {
+      compile: {
+        options: {
+          baseUrl: "js/modules/",
+          name: 'main',
+          out: "js/main.js",
+          optimize: 'none'
+        }
+      }
+    },
+
+    uglify: {
+      options: {
+        report: 'min',
+        preserveComments: 'some'
+      },
+
+      build: {
+        src: 'js/main.js',
+        dest: 'js/main.min.js'
+      }
+    },
+
     imagemin: {
       dist: {
         files: [{
