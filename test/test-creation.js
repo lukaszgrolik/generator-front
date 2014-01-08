@@ -30,8 +30,9 @@ describe('front generator', function () {
             'composer.json',
             '.gitignore',
             'Gruntfile.js',
+            'config.rb',
             'dploy.yaml',
-            'web.php',
+            'index.php',
 
             'sass/_config.scss',
             'sass/_init.scss',

@@ -13,7 +13,7 @@ var appDirs = [
   'js/vendor',
   'views',
   'sass',
-  'sass/blocks',
+  'sass/components',
   'ui-docs'
 ];
 
@@ -23,8 +23,9 @@ var appFiles = [
   { templateName: 'composer.json', name: 'composer.json' },
   { templateName: 'gitignore', name: '.gitignore' },
   { templateName: 'Gruntfile.js', name: 'Gruntfile.js' },
+  { templateName: 'config.rb', name: 'config.rb' },
   { templateName: 'dploy.yaml', name: 'dploy.yaml' },
-  { templateName: 'web.php', name: 'web.php' },
+  { templateName: 'index.php', name: 'index.php' },
 
   { templateName: 'sass-config.scss', name: 'sass/_config.scss' },
   { templateName: 'sass-init.scss', name: 'sass/_init.scss' },
