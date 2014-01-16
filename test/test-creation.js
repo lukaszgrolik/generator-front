@@ -31,6 +31,7 @@ describe('front generator', function () {
             '.gitignore',
             '.htaccess',
             'Gruntfile.js',
+            'config.rb',
             'dploy.yaml',
             'index.php',
 
