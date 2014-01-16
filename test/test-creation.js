@@ -29,6 +29,7 @@ describe('front generator', function () {
             'bower.json',
             'composer.json',
             '.gitignore',
+            '.htaccess',
             'Gruntfile.js',
             'config.rb',
             'dploy.yaml',

@@ -7,12 +7,9 @@ $app = new Silex\Application();
 
 $app['debug'] = true;
 
-$app->get('/', function() use($app, $twig) {
-  return $twig->render('home.twig', array('title' => 'home'));
-});
-
 $app->get('/{page}', function($page) use($app, $twig) {
   return $twig->render($page . '.twig', array('title' => $page));
-});
+})
+->value('page', 'home');
 
 $app->run();

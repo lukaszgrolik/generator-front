@@ -22,6 +22,7 @@ var appFiles = [
   { templateName: '_bower.json', name: 'bower.json' },
   { templateName: 'composer.json', name: 'composer.json' },
   { templateName: 'gitignore', name: '.gitignore' },
+  { templateName: 'htaccess', name: '.htaccess' },
   { templateName: 'Gruntfile.js', name: 'Gruntfile.js' },
   { templateName: 'config.rb', name: 'config.rb' },
   { templateName: 'dploy.yaml', name: 'dploy.yaml' },
