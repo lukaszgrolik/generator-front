@@ -1,3 +1,9 @@
 .sass-cache/
 bower_components/
 node_modules/
+temp/
+vendor/
+.rev
+*.log
+*.sublime*
+dploy.yaml
