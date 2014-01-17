@@ -6,4 +6,5 @@ vendor/
 .rev
 *.log
 *.sublime*
+composer.lock
 dploy.yaml
